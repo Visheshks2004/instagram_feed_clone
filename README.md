@@ -56,9 +56,11 @@ Provider - State management
 cached_network_image - Image caching
 
 📄 License
+
 This project is for demonstration purposes only.
 
 🙏 Acknowledgments
+
 Flutter team for the amazing framework
 
 Unsplash for sample images
