@@ -42,9 +42,7 @@ lib/
 ├── utils/          # Constants and helper functions
 
 └── widgets/         # Reusable UI components
-
     ├── feed/        # Feed-specific widgets
-    
     └── shared/      # Shared widgets (shimmer, error, etc.)
 
 🎯 State Management Choice: Provider
