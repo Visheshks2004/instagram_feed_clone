@@ -1,16 +1,63 @@
-# instagram_feed_clone
+# Instagram Feed Flutter Clone
 
-A new Flutter project.
+## 👨‍💻 Project Information
+- **Developer:** vishesh kumar
+- **Email:** visheshks2004@gmail.com
+- **Date:** 15 March 2026
+- **Flutter Version:** 3.35.3
 
-## Getting Started
+## ✨ Features Implemented
+- ✅ Top Bar with Instagram logo and icons
+- ✅ Stories Tray with gradient rings and LIVE badges
+- ✅ Post Cards with images, captions, and actions
+- ✅ Image Carousel with dot indicators
+- ✅ Pinch-to-Zoom gesture on images
+- ✅ Infinite Scroll (loads more when near bottom)
+- ✅ Like and Save toggle buttons
+- ✅ Snackbar for unimplemented features
+- ✅ Shimmer loading effect (1.5s delay)
+- ✅ Error handling for failed image loads
+- ✅ Pull to Refresh
 
-This project is a starting point for a Flutter application.
+## 🏗️ Architecture
+- **State Management:** Provider + ChangeNotifier
+- **Data Layer:** Repository pattern with mock data
+- **Image Handling:** cached_network_image
+- **UI Components:** Custom widgets with separation of concerns
 
-A few resources to get you started if this is your first Flutter project:
+## 🎯 Assignment Requirements Met
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Requirement | Implementation |
+|-------------|----------------|
+| Pixel-Perfect UI | Exact spacing, typography, and icons |
+| Stories Tray | Gradient rings, LIVE badges |
+| Image Carousel | Multiple images with dot indicators |
+| Pinch-to-Zoom | Custom gesture with smooth animation |
+| Like/Save Toggle | Local state with visual feedback |
+| Snackbar | For Comments, Share buttons |
+| Mock Data | PostRepository with Future/Stream |
+| Loading State | Shimmer effects (1.5s delay) |
+| Image Caching | cached_network_image |
+| Infinite Scroll | Pagination with 2-post threshold |
+| Clean Architecture | Separate folders for models/providers/widgets |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 How to Run
+
+### Prerequisites
+- Flutter SDK (version 3.0.0 or higher)
+- Android Studio / VS Code
+- Git
+
+### Steps
+```bash
+# Clone this repository
+git clone https://github.com/Visheshks2004/instagram_feed_clone.git
+
+# Navigate to project
+cd instagram_feed_clone
+
+# Get dependencies
+flutter pub get
+
+# Run the app
+flutter run
