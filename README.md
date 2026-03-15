@@ -7,27 +7,44 @@ A pixel-perfect Instagram Home Feed clone built with Flutter, demonstrating adva
 Requirement	Implementation
 
 ✅ Pixel-Perfect UI	Exact spacing, typography, and icons matching Instagram
+
 ✅ Stories Tray	Gradient rings for unseen stories, LIVE badges
+
 ✅ Image Carousel	Multiple images with smooth scrolling and dot indicators
+
 ✅ Pinch-to-Zoom	Custom gesture overlay with smooth animation
+
 ✅ Like/Save Toggle	Local state management with visual feedback
+
 ✅ Snackbar Messages	For Comments, Share, and other unimplemented buttons
+
 ✅ Mock Data Layer	PostRepository with Future/Stream and 1.5s delay
+
 ✅ Shimmer Loading	Beautiful loading effects instead of spinners
+
 ✅ Image Caching	Using cached_network_image for memory optimization
+
 ✅ Infinite Scroll	Pagination with 2-post threshold
+
 ✅ Clean Architecture	Separate folders for models/providers/widgets
 
 🏗️ Architecture
 
 lib/
 ├── models/          # Data classes (Post, Story, User)
+
 ├── repositories/    # Mock data with latency simulation
+
 ├── providers/       # State management with ChangeNotifier
+
 ├── services/        # Image caching and utility services
+
 ├── utils/          # Constants and helper functions
+
 └── widgets/         # Reusable UI components
+
     ├── feed/        # Feed-specific widgets
+    
     └── shared/      # Shared widgets (shimmer, error, etc.)
 
 🎯 State Management Choice: Provider
