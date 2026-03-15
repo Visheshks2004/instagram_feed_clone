@@ -5,10 +5,10 @@ class PinchZoomOverlay extends StatefulWidget {
   final String imageUrl;
 
   const PinchZoomOverlay({
-    Key? key,
+    super.key,
     required this.child,
     required this.imageUrl,
-  }) : super(key: key);
+  });
 
   @override
   _PinchZoomOverlayState createState() => _PinchZoomOverlayState();
@@ -54,12 +54,12 @@ class _PinchZoomOverlayState extends State<PinchZoomOverlay>
       if (_scale > 1.0) {
         _offset = _previousOffset + details.focalPoint - details.focalPoint;
         
-        // Add panning when zoomed
+        
         if (details.pointerCount == 2) {
           _offset += details.focalPointDelta;
         }
         
-        // Constrain panning
+      
         final maxOffset = 100.0 * (_scale - 1);
         _offset = Offset(
           _offset.dx.clamp(-maxOffset, maxOffset),

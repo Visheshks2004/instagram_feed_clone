@@ -8,12 +8,12 @@ class CustomErrorWidget extends StatelessWidget {
   final double iconSize;
   
   const CustomErrorWidget({
-    Key? key,
+    super.key,
     this.message,
     this.onRetry,
     this.icon = Icons.error_outline,
     this.iconSize = 48,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -68,11 +68,11 @@ class NetworkImageErrorWidget extends StatelessWidget {
   final String? errorMessage;
 
   const NetworkImageErrorWidget({
-    Key? key,
+    super.key,
     this.width = double.infinity,
     this.height = 200,
     this.errorMessage,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -109,12 +109,12 @@ class EmptyStateWidget extends StatelessWidget {
   final String? actionLabel;
 
   const EmptyStateWidget({
-    Key? key,
+    super.key,
     required this.message,
     this.icon = Icons.inbox,
     this.onAction,
     this.actionLabel,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -157,10 +157,10 @@ class LoadingErrorWidget extends StatelessWidget {
   final VoidCallback onRetry;
 
   const LoadingErrorWidget({
-    Key? key,
+    super.key,
     required this.error,
     required this.onRetry,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

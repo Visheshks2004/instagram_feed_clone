@@ -6,15 +6,15 @@ import '../../utils/constants.dart';
 class StoriesTray extends StatelessWidget {
   final List<Story> stories;
 
-  const StoriesTray({Key? key, required this.stories}) : super(key: key);
+  const StoriesTray({super.key, required this.stories});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 105, // Increased height to prevent overflow
+      height: 105, 
       padding: const EdgeInsets.symmetric(
         horizontal: AppConstants.defaultPadding,
-        vertical: 8, // Reduced vertical padding
+        vertical: 8, 
       ),
       decoration: BoxDecoration(
         border: Border(
@@ -26,7 +26,7 @@ class StoriesTray extends StatelessWidget {
       ),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: stories.length + 1, // +1 for "Your Story"
+        itemCount: stories.length + 1, 
         itemBuilder: (context, index) {
           if (index == 0) {
             return const _YourStoryItem();
@@ -41,21 +41,21 @@ class StoriesTray extends StatelessWidget {
 class _StoryItem extends StatelessWidget {
   final Story story;
 
-  const _StoryItem({Key? key, required this.story}) : super(key: key);
+  const _StoryItem({required this.story});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 68, // Slightly reduced width
-      margin: const EdgeInsets.only(right: 6), // Reduced margin
+      width: 68, 
+      margin: const EdgeInsets.only(right: 6), 
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Story avatar with gradient ring
+          
           Stack(
-            clipBehavior: Clip.none, // Allow live indicator to overflow
+            clipBehavior: Clip.none,
             children: [
               Container(
                 width: 64,
@@ -93,13 +93,13 @@ class _StoryItem extends StatelessWidget {
                       story.user.profileImageUrl,
                     ),
                     onBackgroundImageError: (_, __) {
-                      // Handle image error silently
+                    
                     },
                   ),
                 ),
               ),
               
-              // Live indicator
+              
               if (story.isLive)
                 Positioned(
                   bottom: -2,
@@ -132,10 +132,10 @@ class _StoryItem extends StatelessWidget {
             ],
           ),
           
-          // Username - with fixed height to prevent overflow
+          
           const SizedBox(height: 6),
           Container(
-            height: 14, // Fixed height for username
+            height: 14, 
             alignment: Alignment.center,
             child: Text(
               _getDisplayName(story.user.username),
@@ -163,7 +163,7 @@ class _StoryItem extends StatelessWidget {
 }
 
 class _YourStoryItem extends StatelessWidget {
-  const _YourStoryItem({Key? key}) : super(key: key);
+  const _YourStoryItem();
 
   @override
   Widget build(BuildContext context) {

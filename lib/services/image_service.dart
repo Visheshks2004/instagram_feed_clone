@@ -4,27 +4,26 @@ import 'package:flutter/material.dart';
 import '../utils/constants.dart';
 
 class ImageService {
-  // Precache images for better performance
+  
   static Future<void> precacheImages(List<String> imageUrls, BuildContext context) async {
     for (final url in imageUrls) {
       await precacheImage(
         CachedNetworkImageProvider(
           url,
-          // Remove errorListener from here as it's not needed for precaching
+          
         ), 
         context
       );
     }
   }
   
-  // Get cached image provider with error handling
+  
   static ImageProvider getImageProvider(String imageUrl) {
-    // CachedNetworkImageProvider doesn't have errorListener parameter
-    // Instead, we'll return the provider and handle errors in the widget
+    
     return CachedNetworkImageProvider(imageUrl);
   }
   
-  // Alternative method with error callback using ImageStream
+
   static void loadImageWithCallback(String imageUrl, {
     required Function() onSuccess,
     required Function(dynamic error) onError,
@@ -45,7 +44,7 @@ class ImageService {
     );
   }
   
-  // Build image widget with loading and error states
+  
   static Widget buildNetworkImage({
     required String imageUrl,
     double? width,
@@ -70,7 +69,7 @@ class ImageService {
           ),
         ),
         errorWidget: (context, url, error) {
-          // Log the error for debugging
+         
           debugPrint('Error loading image: $url - $error');
           
           return Container(
@@ -99,7 +98,7 @@ class ImageService {
     );
   }
   
-  // Get image size (useful for aspect ratio calculations)
+  
   static Future<Size> getImageSize(String imageUrl) async {
     final completer = Completer<Size>();
     
@@ -128,7 +127,7 @@ class ImageService {
     return completer.future;
   }
   
-  // Clear cache for specific image
+
   static Future<void> clearImageCache(String imageUrl) async {
     try {
       final image = CachedNetworkImageProvider(imageUrl);
@@ -138,7 +137,7 @@ class ImageService {
     }
   }
   
-  // Clear all cached images
+  
   static Future<void> clearAllCache() async {
     try {
       await CachedNetworkImage.evictFromCache(AppConstants.placeholderImage);
@@ -147,11 +146,11 @@ class ImageService {
     }
   }
   
-  // Get appropriate image size based on device pixel ratio
+  
   static String getOptimizedImageUrl(String baseUrl, {int width = 800}) {
-    // If using an API that supports image resizing
+    
     if (baseUrl.contains('unsplash.com')) {
-      // Check if URL already has query parameters
+      
       if (baseUrl.contains('?')) {
         return '$baseUrl&w=$width&fit=crop';
       } else {
@@ -161,7 +160,7 @@ class ImageService {
     return baseUrl;
   }
 
-  // Helper method to validate image URL
+  
   static bool isValidImageUrl(String url) {
     try {
       final uri = Uri.parse(url);
@@ -172,15 +171,14 @@ class ImageService {
     }
   }
 
-  // Get fallback image URL if main URL fails
+  
   static String getFallbackImageUrl(String originalUrl) {
-    // You can implement logic to return a fallback image
-    // For now, return a placeholder
+    
     return 'https://via.placeholder.com/400x400?text=Image+Not+Found';
   }
 }
 
-// Extension for easier error handling
+
 extension CachedNetworkImageExtension on CachedNetworkImage {
   static Widget withErrorHandling({
     required String imageUrl,

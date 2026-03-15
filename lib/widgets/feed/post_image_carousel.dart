@@ -7,10 +7,10 @@ class PostImageCarousel extends StatefulWidget {
   final bool isSingleImage;
 
   const PostImageCarousel({
-    Key? key,
+    super.key,
     required this.imageUrls,
     this.isSingleImage = false,
-  }) : super(key: key);
+  });
 
   @override
   _PostImageCarouselState createState() => _PostImageCarouselState();

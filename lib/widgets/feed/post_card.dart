@@ -8,7 +8,7 @@ import 'post_image_carousel.dart';
 class PostCard extends StatelessWidget {
   final Post post;
 
-  const PostCard({Key? key, required this.post}) : super(key: key);
+  const PostCard({super.key, required this.post});
 
   void _showSnackbar(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -27,7 +27,7 @@ class PostCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Post Header
+          
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             child: Row(
@@ -53,10 +53,10 @@ class PostCard extends StatelessWidget {
             ),
           ),
           
-          // Post Images
+          
           PostImageCarousel(imageUrls: post.imageUrls),
           
-          // Action Buttons
+          
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             child: Row(
@@ -95,7 +95,7 @@ class PostCard extends StatelessWidget {
             ),
           ),
           
-          // Likes count
+          
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Text(
@@ -107,7 +107,7 @@ class PostCard extends StatelessWidget {
             ),
           ),
           
-          // Caption
+          
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
             child: RichText(
@@ -124,7 +124,7 @@ class PostCard extends StatelessWidget {
             ),
           ),
           
-          // Timestamp
+          
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
             child: Text(

@@ -7,7 +7,7 @@ import 'stories_tray.dart';
 import 'post_card.dart';
 
 class FeedScreen extends StatefulWidget {
-  const FeedScreen({Key? key}) : super(key: key);
+  const FeedScreen({super.key});
 
   @override
   _FeedScreenState createState() => _FeedScreenState();
@@ -117,18 +117,18 @@ class _FeedScreenState extends State<FeedScreen> {
 }
 
 class _ShimmerFeed extends StatelessWidget {
-  const _ShimmerFeed({Key? key}) : super(key: key);
+  const _ShimmerFeed();
 
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        // Top Bar Shimmer
+        
         const SliverToBoxAdapter(
           child: TopBar(),
         ),
         
-        // Stories Tray Shimmer
+        
         SliverToBoxAdapter(
           child: Container(
             height: 105,
@@ -169,7 +169,7 @@ class _ShimmerFeed extends StatelessWidget {
           ),
         ),
         
-        // Posts Shimmer
+        
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (context, index) => const ShimmerPostCard(),

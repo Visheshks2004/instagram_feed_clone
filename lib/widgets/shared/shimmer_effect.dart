@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ShimmerEffect extends StatefulWidget {
   final Widget child;
   
-  const ShimmerEffect({Key? key, required this.child}) : super(key: key);
+  const ShimmerEffect({super.key, required this.child});
 
   @override
   _ShimmerEffectState createState() => _ShimmerEffectState();
@@ -65,7 +65,7 @@ class _ShimmerEffectState extends State<ShimmerEffect> with SingleTickerProvider
 }
 
 class ShimmerPostCard extends StatelessWidget {
-  const ShimmerPostCard({Key? key}) : super(key: key);
+  const ShimmerPostCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,14 +100,14 @@ class ShimmerPostCard extends StatelessWidget {
               ],
             ),
           ),
-          // Image shimmer
+          
           ShimmerEffect(
             child: Container(
               height: 400,
               color: Colors.white,
             ),
           ),
-          // Actions shimmer
+          
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(

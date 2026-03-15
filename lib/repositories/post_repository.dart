@@ -5,7 +5,6 @@ import '../models/story.dart';
 import '../models/user.dart';
 
 class PostRepository {
-  static const int _pageSize = 10;
   static const Duration _simulatedDelay = Duration(milliseconds: 1500);
   
   final List<String> _sampleImageUrls = [

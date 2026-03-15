@@ -29,7 +29,7 @@ class FeedProvider extends ChangeNotifier {
     notifyListeners();
     
     try {
-      // Load stories and first page of posts in parallel
+      
       final results = await Future.wait([
         _repository.getStories(),
         _repository.fetchPosts(page: 0),

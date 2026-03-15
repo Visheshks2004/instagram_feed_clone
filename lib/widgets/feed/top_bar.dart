@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../utils/constants.dart';
 
 class TopBar extends StatelessWidget {
-  const TopBar({Key? key}) : super(key: key);
+  const TopBar({super.key});
 
   void _showComingSoonSnackbar(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -20,7 +20,7 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50, // Slightly increased height
+      height: 50, 
       padding: const EdgeInsets.symmetric(horizontal: AppConstants.defaultPadding),
       decoration: BoxDecoration(
         border: Border(
@@ -33,7 +33,7 @@ class TopBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Logo
+          
           const Text(
             'Instagram',
             style: TextStyle(
@@ -44,11 +44,11 @@ class TopBar extends StatelessWidget {
             ),
           ),
           
-          // Actions
+          
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // Like/Notification button
+              
               GestureDetector(
                 onTap: () => _showComingSoonSnackbar(
                   context, 
@@ -59,22 +59,22 @@ class TopBar extends StatelessWidget {
                   size: 24,
                 ),
               ),
-              const SizedBox(width: 20), // Increased spacing
+              const SizedBox(width: 20), 
               
-              // Messages button
+              
               GestureDetector(
                 onTap: () => _showComingSoonSnackbar(
                   context, 
                   AppStrings.messagesComingSoon
                 ),
                 child: Stack(
-                  clipBehavior: Clip.none, // Allow indicator to overflow
+                  clipBehavior: Clip.none, 
                   children: [
                     const Icon(
                       Icons.chat_bubble_outline,
                       size: 24,
                     ),
-                    // Unread indicator
+                    
                     Positioned(
                       right: -2,
                       top: -2,
