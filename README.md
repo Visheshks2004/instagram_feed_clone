@@ -48,14 +48,6 @@
 - Android Studio / VS Code
 - Git
 
-### Steps
-```bash
-# Clone this repository
-git clone https://github.com/Visheshks2004/instagram_feed_clone.git
-
-# Navigate to project
-cd instagram_feed_clone
-
 🛠️ Built With
 Flutter - UI framework
 
@@ -72,6 +64,14 @@ Flutter team for the amazing framework
 Unsplash for sample images
 
 Instagram for design inspiration
+
+### Steps
+```bash
+# Clone this repository
+git clone https://github.com/Visheshks2004/instagram_feed_clone.git
+
+# Navigate to project
+cd instagram_feed_clone
 
 # Get dependencies
 flutter pub get
