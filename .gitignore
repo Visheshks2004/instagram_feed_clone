@@ -1,0 +1,60 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+build/
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+*.log
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Android
+android/
+.android/
+local.properties
+*.keystore
+*.jks
+key.properties
+
+# iOS
+ios/
+.ios/
+Podfile.lock
+DerivedData/
+
+# macOS
+macos/
+.macos/
+
+# Web
+web/
+
+# Windows
+windows/
+.windows/
+
+# Linux
+linux/
+.linux/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Miscellaneous
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.pid
+*.log
+*.trace
