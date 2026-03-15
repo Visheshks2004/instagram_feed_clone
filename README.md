@@ -56,6 +56,23 @@ git clone https://github.com/Visheshks2004/instagram_feed_clone.git
 # Navigate to project
 cd instagram_feed_clone
 
+🛠️ Built With
+Flutter - UI framework
+
+Provider - State management
+
+cached_network_image - Image caching
+
+📄 License
+This project is for demonstration purposes only.
+
+🙏 Acknowledgments
+Flutter team for the amazing framework
+
+Unsplash for sample images
+
+Instagram for design inspiration
+
 # Get dependencies
 flutter pub get
 
