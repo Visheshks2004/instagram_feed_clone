@@ -1,9 +1,11 @@
-<<<<<<< HEAD
 📱 Instagram Feed Flutter Clone
+
 A pixel-perfect Instagram Home Feed clone built with Flutter, demonstrating advanced UI/UX implementation, clean architecture, and complex gesture handling.
 
 📋 Assignment Requirements Met
+
 Requirement	Implementation
+
 ✅ Pixel-Perfect UI	Exact spacing, typography, and icons matching Instagram
 ✅ Stories Tray	Gradient rings for unseen stories, LIVE badges
 ✅ Image Carousel	Multiple images with smooth scrolling and dot indicators
